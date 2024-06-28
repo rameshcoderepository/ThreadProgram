@@ -1,0 +1,25 @@
+
+package collectioninterface;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+
+public class CollectionsWrapper {
+
+	public static void main(String args[]) {
+
+		ArrayList al = new ArrayList();
+		al.add(Integer.valueOf(201));
+		al.add(Integer.valueOf(101));
+		al.add(250);// internally will be converted into objects as Integer.valueOf(230)
+
+		Collections.sort(al);
+
+		Iterator itr = al.iterator();
+		while (itr.hasNext()) {
+			System.out.println(itr.next());
+		}
+	}
+
+}
